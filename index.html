@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="hidden">
+    <div id="loading" class="loading">
+        <div class="loading__content">
+            <img src="./gif/1490.gif" alt="Loading" width="70px">
+            <img src="./gif/745.gif" alt="Loading" width="120px">
+        </div>
+    </div>
+    <div class="bg">
+        <section class="menu">
+            <div class="menu__form">
+                <h1 class="menu__title">Piedra, papel o tijera</h1>
+                <input class="menu__user" type="text" name="user" id="user" autocomplete="off" placeholder="Nombre de usuario">
+                <button class="menu__play">Jugar</button>
+            </div>
+        </section>
+        <div class="game">
+            <h1 class="game__counter">3</h1>
+            <div class="game__content">
+                <div class="game__scoreboard">
+                    <div class="game__numbers">
+                        <h1 class="game__text" >0</h1>
+                        <h1 class="game__text">-</h1>
+                        <h1 class="game__text">0</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg__about">
+        </div>
+    </div>
+    <audio id="audio" loop>
+        <source src="./audio/song.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="error">
+        <source src="./audio/error.mp3" type="audio/mpeg">
+    </audio>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,400;1,300;1,400;1,600&display=swap');
+
+:root{
+    --source-serif-pro: 'Source Serif Pro', serif;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    --circle-animation: circle(111.4% at 50% 0);
+}
+
+.bg{
+    width: 100%;
+    height: 100vh;
+    background-image: url("./img/fondo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .5s;
+}
+
+.bg__about{
+    width: 100%;
+    height: 100vh;
+    z-index: 50;
+    transition-duration: .5s;
+}
+
+.hidden{
+    overflow: hidden;
+}
+
+.loading{
+    background: black;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    transition-duration: .5s;
+    align-items: center;
+    justify-content: center;
+    clip-path: var(--circle-animation);
+    z-index: 40;
+}
+
+/* Estp es para cerrar la pantalla de carga */
+.loading--close{
+    --circle-animation: circle(0% at 50% 0);;
+}
+
+.loading__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 1s;
+    transition-timing-function: ease-in;
+    z-index: 30;
+}
+
+/* Esta clase es para cerrar el menú donde te pide el nombre de usuario, se agrega la clase desde JavaScript*/
+.menu--close{
+    transform: translateX(-100%);
+}
+
+.menu__form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 300px;
+    background-color: white;
+    padding: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 30px -10px black;
+}
+
+.menu__title{
+    font-family: var(--source-serif-pro);
+    font-weight: 600;
+}
+
+.menu__user{
+    width: 245px;
+    padding: 5px 6px;
+    outline: none;
+    font-family: var(--source-serif-pro);
+    border: none;
+    font-size: 15px;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+.menu__user--failed{
+    width: 245px;
+    padding: 5px 6px;
+    outline: none;
+    font-family: var(--source-serif-pro);
+    border: none;
+    font-size: 15px;
+    border-bottom: 1px solid rgb(240, 4, 4);
+    text-align: center;
+}
+
+.menu__user--failed::placeholder{
+    color: red;
+}
+
+.menu__play{
+    background-color: #1cedae;
+    filter: brightness(1.5);
+    cursor: pointer;
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+    transition-duration: 0.5s;
+    border: none;
+    font-weight: bold ;
+}
+
+.menu__play:hover{
+    transform: scale(0.98);
+    background-color: #16b383
+}
+
+
+.game{
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    transition-duration: 1s;
+    transition-timing-function: ease-in;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game--show{
+    transform: translateX(0%);
+}
+
+.game__counter{
+    color: white;
+    transition-duration: .5s;
+    opacity: 0;
+    position: absolute;
+}
+
+.game__content{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game__scoreboard{
+    display: flex;
+    flex-direction: column;
+}
+
+.game__numbers{
+    display: flex;
+}
+
+.game__text{
+    color: white;
+}
