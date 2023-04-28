@@ -18,7 +18,7 @@
         <section class="menu">
             <div class="menu__form">
                 <h1 class="menu__title">Piedra, papel o tijera</h1>
-                <input class="menu__user" type="text" name="user" id="user" autocomplete="off" placeholder="Nombre de usuario">
+                <input class="menu__user" type="text" name="user" id="user" autocomplete="off" placeholder="Nombre de usuario" maxlength="14">
                 <button class="menu__play">Jugar</button>
             </div>
         </section>
@@ -27,9 +27,38 @@
             <div class="game__content">
                 <div class="game__scoreboard">
                     <div class="game__numbers">
-                        <h1 class="game__text" >0</h1>
+                        <h1 class="game__text" id="player__scoreboard">0</h1>
                         <h1 class="game__text">-</h1>
-                        <h1 class="game__text">0</h1>
+                        <h1 class="game__text" id="computer__scoreboard">0</h1>
+                    </div>
+                    <h1 class="game__title">Marcador</h1>
+                </div>
+                <div class="game__play">
+                    <div class="game__section">
+                        <div class="game__test">
+                            <h1 class="game__user" id="username">Usuario</h1>
+                            <p class="game__option">Seleccione una opción</p>
+                        </div>
+                        <img class="game__icon game__icon--player" id="0" src="icons/paper.png" alt="Paper">
+                        <img class="game__icon game__icon--player" id="1" src="icons/stone.png" alt="Stone">
+                        <img class="game__icon game__icon--player" id="2" src="icons/scissors.png" alt="Scissors">
+                    </div>
+                    <div class="game__bar">
+                    </div>
+                    <div class="game__section">
+                        <div class="game__test">
+                            <h1 class="game__user">Computadora</h1>
+                        </div>
+                        <img class="game__icon" id="c0" src="icons/paper.png" alt="Paper">
+                        <img class="game__icon" id="c1" src="icons/stone.png" alt="Stone">
+                        <img class="game__icon" id="c2" src="icons/scissors.png" alt="Scissors">
+                    </div>
+                </div>
+                <div class="game__result">
+                    <div class="game__about">
+                        <img id="showIconPlayer" src="icons/paper.png" class="game__iconResult" alt="">
+                        <h1 id="result" class="game__text-result">Resultado</h1>
+                        <img id="showIconComputer" src="icons/paper.png" class="game__iconResult" alt="">
                     </div>
                 </div>
             </div>
